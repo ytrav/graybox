@@ -1,0 +1,20 @@
+@use "../variables.scss" as v;
+
+article {
+  @include v.flex(column, space-between, flex-start, nowrap);
+  border: 2px solid #000d50;
+
+  position: absolute;
+  bottom: 15px;
+  // left: auto;
+  // right: auto;
+  width: calc(100% - 100px);
+
+  font-family: "Phudu", display;
+  p {
+    font-size: 1.3em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}

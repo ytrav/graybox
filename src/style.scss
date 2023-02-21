@@ -1,0 +1,23 @@
+@use 'variables.scss' as v;
+
+
+@import url(https://fonts.googleapis.com/css?family=Phudu:300,regular,500,600,700,800,900);
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid #ff000083;
+}
+
+html, body, #app {
+    border: none;
+}
+
+#app {
+    @include v.flex(column, space-between, center, nowrap);
+    min-height: 100%;
+    height: 100vh;
+    width: 100%;
+}
