@@ -21,7 +21,7 @@ import './components/positions/GamePos2.scss'
 import './components/positions/GamePos3.scss'
 import './components/positions/GamePos4.scss'
 
-
+console.log('router', router)
 createApp(App)
     .use(mdiVue, {
         icons: mdijs

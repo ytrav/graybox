@@ -15,7 +15,6 @@ export default {
       <component :is="Component" />
     </transition>
   </router-view>
-  <DialogueBox />
 </template>
 
 <style>

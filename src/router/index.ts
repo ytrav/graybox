@@ -13,10 +13,10 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         { path: '/', component: AppMenu },
-        { path: '/game/pos1', component: GamePos1 },
-        { path: '/game/pos2', component: GamePos2 },
-        { path: '/game/pos3', component: GamePos3 },
-        { path: '/game/pos4', component: GamePos4 },
+        { path: '/pos1', component: GamePos1 },
+        { path: '/pos2', component: GamePos2 },
+        { path: '/pos3', component: GamePos3 },
+        { path: '/pos4', component: GamePos4 },
     ]
 })
 
