@@ -7,9 +7,6 @@ export default {
 </script>
 
 <template>
-    <!-- <div>
-        <span>pos 1</span>
-    </div> -->
     <div class="scene">
         <img src="../../assets/scenes/scene3.png" alt="scene 3">
         <router-link to="/pos4">go</router-link>

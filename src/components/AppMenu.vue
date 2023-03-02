@@ -9,6 +9,6 @@ export default {
 <template>
     <div>
         <span>menu</span>
-        <router-link to="/pos2">go</router-link>
+        <router-link to="/pos1">go</router-link>
     </div>
 </template>

@@ -1,0 +1,5 @@
+@use '../../variables.scss' as v;
+
+.door {
+    @include v.trigger(35, 24, 10, 4, -3)
+}

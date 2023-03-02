@@ -9,3 +9,11 @@
     align-items: $align;
     flex-wrap: $wrap;
 }
+
+@mixin trigger($x, $y, $h, $w, $r) {
+    left: $x + vw;
+    top: $y + vw;
+    height: $h + vw;
+    width: $w + vw;
+    transform: rotate($r + deg);
+}
