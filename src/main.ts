@@ -12,6 +12,10 @@ import store from './store'
 import mdiVue from 'mdi-vue/v3'
 import * as mdijs from '@mdi/js'
 
+// View360 import
+import View360 from "@egjs/vue3-view360";
+// import "@egjs/vue-view360/css/view360.min.css";
+
 
 // SCSS imports
 import './style.scss'
@@ -28,4 +32,5 @@ createApp(App)
     })
     .use(router)
     .use(store)
+    .use(View360)
     .mount('#app')

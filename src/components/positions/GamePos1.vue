@@ -10,8 +10,9 @@ export default {
         return {
             projection,
             initialZoom: 5,
-            zoomRange: [0.5, 3],
-            disableContextMenu: true
+            fov: 90,
+            disableContextMenu: true,
+            wheelScrollable: true,
         }
     },
     components: {
@@ -20,28 +21,32 @@ export default {
     props: {
         initialZoom: {
             type: Number,
-            default: 1
+            default: 1,
+        },
+        fov: {
+            type: Number,
+            default: 90,
         },
         disableContextMenu: {
             type: Boolean,
-            default: false
+            default: false,
         },
-        zoomRange: {
-            type: Object as => Range,
-
-            default: () => ({
-                min: 0,
-                max: 5
-            }),
-            validator: (val: any) => typeof val.min === 'number' && typeof val.max === 'number'
-        }
+        wheelScrollable: {
+            type: Boolean,
+            default: false,
+        },
     }
 }
 </script>
 
 <template>
     <div class="scene">
-        <View360 :projection="projection" :initial-zoom="2.5" :zoom-range="{ min: 0.5, max: 3 }" :disableContextMenu="true"
-            style="width: 100%; height: 100%;" />
+        <View360 :hotspot="{ 'zoom': true }" :projection="projection" :initial-zoom="3.5" :disableContextMenu="true"
+            :wheelScrollable="true" :fov="90" style="width: 100%; height: 100%;">
+            <div class="view360-hotspots">
+                <div class="view360-hotspot door" data-yaw="14" data-pitch="15">click me lcicl meeeee</div>
+
+            </div>
+        </View360>
     </div>
 </template>
