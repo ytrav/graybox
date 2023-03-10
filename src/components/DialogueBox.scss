@@ -1,20 +1,48 @@
 @use "../variables.scss" as v;
 
-article {
-  @include v.flex(column, space-between, flex-start, nowrap);
-  border: 2px solid #000d50;
-
+#dialogue {
   position: absolute;
-  bottom: 15px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  @include v.flex(column, flex-end, center, nowrap);
+  // background-color: #f5f5f5;
+  z-index: 2;
+}
+
+article {
+  @include v.flex(column, flex-start, flex-start, nowrap);
+  // border: 2px solid #000d50;
+  // z-index: 2;
+  gap: 20px;
+  // position: absolute;
+  // bottom: 50px;
+  margin-bottom: 100px;
+  max-height: 200px;
+  padding: 30px;
+  height: 100%;
+  background-color: #222222;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: #f5f5f5;
   // left: auto;
   // right: auto;
-  width: calc(100% - 100px);
+  width: calc(100% - 200px);
 
-  font-family: "Phudu", display;
+  font-family: "Press Start 2P", cursive;
   p {
-    font-size: 1.3em;
+    font-size: 1.5em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 2;
   }
   h2 {
-    font-size: 1.5em;
+    font-size: 2em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 }

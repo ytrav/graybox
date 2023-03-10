@@ -1,7 +1,29 @@
 @use '../../variables.scss' as v;
 
+
+.exit, .box1, .box2, .light {
+    cursor: help !important;
+}
+
 .door {
-    // @include v.trigger(35, 24, 10, 4, -3)
-    height: 100px;
-    width: 20px;
+    height: 150px;
+    width: 60px;
+}
+.exit {
+    height: 140px;
+    width: 57px;
+}
+// right
+.box1 {
+    height: 105px;
+    width: 100px;
+}
+// left
+.box2 {
+    height: 90px;
+    width: 57px;
+}
+.light {
+    height: 50px;
+    width: 100px;
 }

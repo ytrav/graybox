@@ -26,11 +26,27 @@ import './components/positions/GamePos3.scss'
 import './components/positions/GamePos4.scss'
 
 console.log('router', router)
-createApp(App)
-    .use(mdiVue, {
-        icons: mdijs
-    })
-    .use(router)
-    .use(store)
-    .use(View360)
-    .mount('#app')
+
+const app = createApp(App);
+
+app.use(mdiVue, {
+    icons: mdijs
+})
+
+app.use(router)
+app.provide("$store", store)
+app.config.globalProperties.$store = store
+app.use(store)
+app.use(View360)
+app.mount('#app')
+
+// createApp(App)
+//     .use(mdiVue, {
+//         icons: mdijs
+//     })
+//     .use(router)
+//     .provide("$store", store)
+    
+//     .use(store)
+//     .use(View360)
+//     .mount('#app')

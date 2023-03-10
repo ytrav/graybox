@@ -4,17 +4,21 @@
 @import url(https://fonts.googleapis.com/css?family=Phudu:300,regular,500,600,700,800,900);
 // @import "https://unpkg.com/@egjs/view360@latest/css/view360.min.css";
 
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P:regular);
+
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     // border: 1px solid #ff000083;
+    cursor: crosshair;
 }
 
 html, body, #app {
     border: none;
-    background-color: #0a0a0a
+    background-color: #0a0a0a;
+    overflow: hidden;
 }
 
 #app {
@@ -32,6 +36,7 @@ html, body, #app {
     left: 0;
     bottom: 0;
     overflow: hidden;
+    border-radius: 30px;
 }
 
 .view360-container {
@@ -51,12 +56,34 @@ html, body, #app {
 //     right: 0;
 // }
 
+.link {
+    cursor: alias;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    a {
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
+
 a {
     color: #fff;
     text-decoration: none;
+    cursor: alias;
 }
 
 .view360-hotspot {
     // position: absolute;
-    border: 1px solid #fff;
+    // border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.dialogue-trigger {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
 }
