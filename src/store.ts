@@ -3,6 +3,7 @@ import { createStore, Store } from 'vuex';
 
 // interface for the state
 interface State {
+  fullscreen: boolean;
   showDialogue: boolean;
   dialogueHeading: string;
   dialogueText: string;
@@ -13,6 +14,7 @@ interface State {
 const store: Store<State> = createStore<State>({
   state(): State {
     return {
+      fullscreen: false,
       showDialogue: false,
       dialogueHeading: '*',
       dialogueText: `It's a box, with boxes stacked on top of it.                     This is the first time you see a box sculpture like this.`,
@@ -20,6 +22,9 @@ const store: Store<State> = createStore<State>({
     };
   },
   mutations: {
+    changeFullscreen(state: State, mode: boolean): void {
+      state.fullscreen = mode;
+    },
     setDialogue(state: State, dialogue: { heading: string; text: string }): void {
       state.showDialogue = true;
       state.dialogueHeading = dialogue.heading;

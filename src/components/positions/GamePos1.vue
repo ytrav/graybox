@@ -109,16 +109,15 @@ export default {
 
 <template>
     <div class="scene">
-        <View360 :hotspot="{ 'zoom': true }" :projection="projection" :initial-zoom="3.5" :disableContextMenu="true" :useGrabCursor="false"
-            :wheelScrollable="true" :fov="90" style="width: 100%; height: 100%;">
+        <View360 :hotspot="{ 'zoom': true }" :projection="projection" :initial-zoom="3.5" :disableContextMenu="true"
+            :useGrabCursor="false" :wheelScrollable="true" :fov="90" style="width: 100%; height: 100%;">
             <div class="view360-hotspots">
                 <div class="view360-hotspot door link" :data-yaw="13.5" :data-pitch="17.6"><router-link
                         to="/pos2"></router-link></div>
-                <div  @click="flavorText('exit')" class="view360-hotspot exit" :data-yaw="0.7" :data-pitch="20"></div>
-                <div  @click="flavorText('box')" class="view360-hotspot box1" :data-yaw="-3.6"
-                    :data-pitch="19.2"></div>
-                <div @click="flavorText('box')" class="view360-hotspot box2" :data-yaw="7.5"
-                    :data-pitch="21.3"></div>
+                <div class="view360-hotspot exit link" :data-yaw="0.7" :data-pitch="20"><router-link
+                        to="/pos4"></router-link></div>
+                <div @click="flavorText('box')" class="view360-hotspot box1" :data-yaw="-3.6" :data-pitch="19.2"></div>
+                <div @click="flavorText('box')" class="view360-hotspot box2" :data-yaw="7.5" :data-pitch="21.3"></div>
                 <div @click="flavorText('light')" class="view360-hotspot light" :data-yaw="3" :data-pitch="30.8"></div>
 
             </div>

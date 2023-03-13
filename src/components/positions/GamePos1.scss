@@ -1,29 +1,29 @@
 @use '../../variables.scss' as v;
 
 
-.exit, .box1, .box2, .light {
+.exit, .box1, .box2, .light, .chest {
     cursor: help !important;
 }
 
 .door {
-    height: 150px;
-    width: 60px;
+    height: 15vh;
+    width: 3vw;
 }
 .exit {
-    height: 140px;
-    width: 57px;
+    height: 13vh;
+    width: 2.8vw;
 }
 // right
 .box1 {
-    height: 105px;
-    width: 100px;
+    height: 10vh;
+    width: 5vw;
 }
 // left
 .box2 {
-    height: 90px;
-    width: 57px;
+    height: 9vh;
+    width: 3vw;
 }
 .light {
-    height: 50px;
-    width: 100px;
+    height: 5vh;
+    width: 5vw;
 }
